@@ -19,9 +19,9 @@ import java.nio.file.Paths;
 
 public class CalculatorSteps {
 
-     Calculator calculator;
+ private    Calculator calculator;
     
-     Scenario scenario;
+   private  Scenario scenario;
 
     @Before
     public void setUp(Scenario scenario) {
