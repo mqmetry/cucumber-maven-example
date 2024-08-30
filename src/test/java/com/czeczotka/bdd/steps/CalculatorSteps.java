@@ -55,8 +55,13 @@ public class CalculatorSteps {
     public void embedScreenshot(Scenario scenario) {  
             try {  
             		Path path = Paths.get("./1.png");
-                byte[] screenshot = Files.readAllBytes(path);
-                scenario.embed(screenshot, "image/png"); 
+
+		    byte[] screenshot = Files.readAllBytes(path);
+			scenario.attach(screenshot, "image/png", "Screenshot");
+
+
+
+		    
             } catch (ClassCastException cce) {  
                 cce.printStackTrace();  
             } catch (IOException e) {
